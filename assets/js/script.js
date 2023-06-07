@@ -1,4 +1,4 @@
-// Parallax
+// Parallax Start
 $(document).ready(function () {
     $('#pagepiling').pagepiling({
         menu: '#menu',
@@ -23,8 +23,9 @@ $(document).ready(function () {
         animateAnchor: true,
     });
 });
+// Parallax End
 
-
+// Filter Portfolio Start
 class FilterGallery {
     constructor() {
         this.$menuPortfolio = $('.menu-portfolio li');
@@ -68,8 +69,9 @@ class FilterGallery {
     }
 }
 const fliterGallery = new FilterGallery();
+// Filter Portfolio End
 
-// Portfolio Item Details Popup //
+// Portfolio Item Details Popup Start //
 document.addEventListener("click", (e) => {
     if (e.target.classList.contains("btn-detail")) {
         togglePortfolioPopup();
@@ -98,4 +100,10 @@ function portfolioItemDetails(portfolioItem) {
     document.querySelector(".pp-body").innerHTML =
         portfolioItem.querySelector(".portfolio-item-details").innerHTML;
 }
-// Portfolio Item Details Popup //
+// Portfolio Item Details Popup End //
+
+// Sweet Alert Start
+document.querySelector(".send").addEventListener('click', function () {
+    Swal.fire("Thank you", "Your message already send!", "success");
+});
+// Sweet Alert End
