@@ -2,12 +2,12 @@
 $(document).ready(function () {
     $('#pagepiling').pagepiling({
         menu: '#menu',
-        anchors: ['home', 'about', 'resume', 'portfolio', 'contact'],
+        anchors: ['home', 'about', 'portfolio', 'contact'],
         navigation: {
             'textColor': '#f2f2f2',
             'bulletsColor': '#ccc',
             'position': 'right',
-            'tooltips': ['Home', 'About', 'Resume', 'Portfolio', 'Contact']
+            'tooltips': ['Home', 'About', 'Portfolio', 'Contact']
         },
         sectionsColor: ['#EBEEF1', '#EBEEF1', '#EBEEF1', '#EBEEF1'],
         direction: 'vertical',
