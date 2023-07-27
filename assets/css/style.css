@@ -27,8 +27,6 @@
     width: 6px;
 }
 
-
-
 ::-webkit-scrollbar-thumb {
     background: var(--forth-color);
 }
@@ -45,6 +43,15 @@ h6 {
 p {
     margin: 0;
     padding: 0;
+}
+
+a {
+    color: var(--text-color);
+}
+
+a:hover {
+    color: #FF00A0;
+    transition: all 300ms ease-in-out;
 }
 
 body {
