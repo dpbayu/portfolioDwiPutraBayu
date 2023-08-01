@@ -125,7 +125,6 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 14px;
-    font-family: arial, helvetica, sans-serif;
     white-space: nowrap;
     max-width: 220px;
 }
