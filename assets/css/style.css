@@ -315,6 +315,15 @@ section {
 #portfolio img {
     width: 100%;
     border-radius: 10px;
+    height: 125px;
+    object-fit: fill;
+}
+
+#portfolio video {
+    width: 100%;
+    border-radius: 10px;
+    height: 125px;
+    object-fit: fill;
 }
 
 #portfolio .img-portfolio {
@@ -382,6 +391,32 @@ section {
     display: none;
 }
 
+/* Portfoli Video Start */
+#portfolio .portfolio-item-thumbnail-video {
+    padding: 10px;
+    border-radius: 6px;
+}
+
+#portfolio .portfolio-item .portfolio-item-title-video {
+    padding: 10px;
+}
+
+#portfolio .portfolio-item .btn-detail-video {
+    margin: 10px;
+    box-shadow: var(--box-shadow-primary);
+    color: var(--text-color);
+}
+
+#portfolio .portfolio-item .btn-detail-video:hover {
+    box-shadow: var(--box-shadow-secondary);
+}
+
+#portfolio .portfolio-item-details-video {
+    display: none;
+}
+/* Portfolio Video End */
+
+/*  Popup Detail Start */
 .portfolio-popup {
     position: fixed;
     left: 0;
@@ -477,6 +512,105 @@ section {
     border-radius: 12px;
     width: 100%;
 }
+/* Popup Detail End */
+
+/*  Popup Detail Video Start */
+.portfolio-popup-video {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 200;
+    visibility: hidden;
+}
+
+.portfolio-popup-video.open {
+    visibility: visible;
+    overflow-y: auto;
+}
+
+.pp-inner-video {
+    display: flex;
+    min-height: 100vh;
+    padding: 40px 15px;
+    align-items: center;
+    justify-content: center;
+    background: var(--background-web);
+}
+
+.pp-content-video {
+    padding: 30px;
+    border-radius: 30px;
+    max-width: 900px;
+    width: 100%;
+    opacity: 0;
+    transform: scale(0.9);
+    box-shadow: var(--box-shadow-primary);
+}
+
+.pp-content-video:hover {
+    box-shadow: var(--box-shadow-secondary);
+}
+
+.portfolio-popup-video.open .pp-content-video {
+    opacity: 1;
+    transform: scale(1);
+    transition: all 0.5s ease;
+}
+
+.pp-header-video {
+    position: relative;
+}
+
+.pp-header-video h3 {
+    margin: 10px 0;
+}
+
+.pp-body-video .description-video {
+    margin: 10px 0;
+}
+
+.pp-body-video .description-video p {
+    text-align: justify;
+}
+
+.pp-body-video .general-info-video ul li {
+    font-weight: 600;
+}
+
+.pp-body-video .general-info-video ul li span {
+    font-weight: 400;
+}
+
+.pp-header-video .btn {
+    display: flex;
+    height: 40px;
+    width: 40px;
+    padding: 0;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: -40px;
+    top: -40px;
+    background: var(--background-web);
+    box-shadow: var(--box-shadow-primary);
+}
+
+.pp-header-video .btn:hover {
+    box-shadow: var(--box-shadow-secondary);
+}
+
+.pp-thumbnail-video {
+    border-radius: 6px;
+}
+
+.pp-thumbnail-video video {
+    border-radius: 12px;
+    width: 100%;
+}
+/* Popup Video End */
 
 /* Contact */
 #contact form {

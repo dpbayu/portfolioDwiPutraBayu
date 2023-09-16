@@ -102,6 +102,38 @@ function portfolioItemDetails(portfolioItem) {
 }
 // Portfolio Item Details Popup End //
 
+// Portfolio Item Details Video Popup Start //
+document.addEventListener("click", (e) => {
+    if (e.target.classList.contains("btn-detail-video")) {
+        togglePortfolioPopupVideo();
+        document.querySelector(".portfolio-popup-video").scrollTo(0, 0);
+        portfolioItemDetailsVideo(e.target.parentElement);
+    }
+})
+
+function togglePortfolioPopupVideo() {
+    document.querySelector(".portfolio-popup-video").classList.toggle("open");
+    document.body.classList.toggle("hide-scrolling");
+    // document.querySelector(".main").classList.toggle("fade-out")
+}
+
+document.querySelector(".pp-close-video").addEventListener("click", togglePortfolioPopupVideo);
+document.addEventListener("click", (e) => {
+    if (e.target.classList.contains("pp-inner-video")) {
+        togglePortfolioPopupVideo();
+    }
+});
+
+function portfolioItemDetailsVideo(portfolioItem) {
+    document.querySelector(".pp-thumbnail-video video").src =
+        portfolioItem.querySelector(".portfolio-item-thumbnail-video source").src;
+    document.querySelector(".pp-header-video h3").innerHTML =
+        portfolioItem.querySelector(".portfolio-item-title-video").innerHTML;
+    document.querySelector(".pp-body-video").innerHTML =
+        portfolioItem.querySelector(".portfolio-item-details-video").innerHTML;
+}
+// Portfolio Item Details Video Popup End //
+
 // Sweet Alert Start
 document.querySelector(".send").addEventListener('click', function () {
     Swal.fire("Thank you", "Your message already send!", "success");
