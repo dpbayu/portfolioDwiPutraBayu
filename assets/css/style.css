@@ -103,6 +103,10 @@ section {
     border-radius: 12px;
 }
 
+#home img:hover {
+    box-shadow: var(--box-shadow-secondary);
+}
+
 #home .social-links a {
     width: 50px;
     height: 50px;
@@ -119,21 +123,15 @@ section {
 
 #home .social-links a:hover {
     box-shadow: var(--box-shadow-secondary);
-    /* background: var(--forth-color) border-box;
-    box-shadow: var(--box-shadow-forth); */
 }
 
 #home a {
     color: var(--text-color);
     box-shadow: var(--box-shadow-primary);
-    /* background: var(--forth-color) border-box;
-    box-shadow: var(--box-shadow-forth); */
 }
 
 #home a:hover {
     box-shadow: var(--box-shadow-secondary);
-    /* background: var(--forth-color) border-box;
-    box-shadow: var(--box-shadow-forth); */
 }
 
 /*About */
@@ -162,32 +160,10 @@ section {
 #about .about-content .about-btn .btn-forth {
     box-shadow: var(--box-shadow-primary);
     color: var(--text-color);
-    /* background: var(--forth-color) border-box;
-    box-shadow: var(--box-shadow-forth); */
 }
 
 #about .about-content .btn-forth:hover {
     box-shadow: var(--box-shadow-secondary);
-    /* background: var(--forth-color) border-box;
-    box-shadow: var(--box-shadow-forth); */
-}
-
-#about .text-forth {
-    padding: 6px 12px;
-    border-radius: 6px;
-    box-shadow: var(--box-shadow-primary);
-    color: var(--text-color);
-    text-decoration: none;
-    /* background: var(--forth-color);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; */
-}
-
-#about .text-forth:hover {
-    box-shadow: var(--box-shadow-secondary);
-    /* background: var(--forth-color);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; */
 }
 
 #about .about-content .about-skill {
@@ -217,8 +193,6 @@ section {
 
 #about .about-content .about-skill .icons .fab:hover {
     box-shadow: var(--box-shadow-secondary);
-    /* background: var(--forth-color) border-box;
-    box-shadow: var(--box-shadow-forth); */
 }
 
 #about .about-content .about-skill .fa-brands {
@@ -236,12 +210,26 @@ section {
     height: 100%;
     object-fit: cover;
     object-position: center;
+    transition: all ease-in-out 1.5s;
+    -webkit-transition: all ease-in-out 1.5s;
+    -moz-transition: all ease-in-out 1.5s;
+    -ms-transition: all ease-in-out 1.5s;
+    -o-transition: all ease-in-out 1.5s;
+}
+
+#about .img-profile:hover {
+    box-shadow: var(--box-shadow-secondary);
+    padding: 20px;
+    transition: all ease-in-out 1s;
+    -webkit-transition: all ease-in-out 1s;
+    -moz-transition: all ease-in-out 1s;
+    -ms-transition: all ease-in-out 1s;
+    -o-transition: all ease-in-out 1s;
 }
 
 #about .about-project {
     display: flex;
     justify-content: space-evenly;
-
 }
 
 #about .about-project .about-icon-project {
@@ -295,17 +283,26 @@ section {
     border-radius: 6px;
     cursor: pointer;
     box-shadow: var(--box-shadow-primary);
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
 }
 
 #portfolio .menu-portfolio li.active {
     box-shadow: var(--box-shadow-secondary);
+    font-weight: 500;
 }
 
 #portfolio .post-thumb {
     padding: 20px;
-    border-radius: 12px;
+    border-radius: 6px;
     box-shadow: var(--box-shadow-primary);
     margin: 10px 0;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
 }
 
 #portfolio .post-thumb:hover {
@@ -314,16 +311,24 @@ section {
 
 #portfolio img {
     width: 100%;
-    border-radius: 10px;
+    border-radius: 12px;
     height: 125px;
     object-fit: fill;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
 }
 
 #portfolio video {
     width: 100%;
-    border-radius: 10px;
+    border-radius: 12px;
     height: 125px;
     object-fit: fill;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
 }
 
 #portfolio .img-portfolio {
@@ -357,11 +362,15 @@ section {
 }
 
 #portfolio .portfolio-item {
-    width: calc((100% / 4) - 20px);
-    margin: 0 20 20px;
-    padding: 20px;
+    width: calc((100% / 4) - 40px);
+    margin: 20px 20px;
+    padding: 12px;
     box-shadow: var(--box-shadow-primary);
-    border-radius: 12px;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
 }
 
 #portfolio .portfolio-item:hover {
@@ -371,6 +380,10 @@ section {
 #portfolio .portfolio-item-thumbnail {
     padding: 10px;
     border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
 }
 
 #portfolio .portfolio-item .portfolio-item-title {
@@ -395,6 +408,10 @@ section {
 #portfolio .portfolio-item-thumbnail-video {
     padding: 10px;
     border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
 }
 
 #portfolio .portfolio-item .portfolio-item-title-video {
@@ -443,12 +460,16 @@ section {
 
 .pp-content {
     padding: 30px;
-    border-radius: 30px;
+    border-radius: 6px;
     max-width: 900px;
     width: 100%;
     opacity: 0;
     transform: scale(0.9);
     box-shadow: var(--box-shadow-primary);
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
 }
 
 .pp-content:hover {
@@ -498,6 +519,10 @@ section {
     top: -40px;
     background: var(--background-web);
     box-shadow: var(--box-shadow-primary);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
 }
 
 .pp-header .btn:hover {
@@ -506,11 +531,19 @@ section {
 
 .pp-thumbnail {
     border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
 }
 
 .pp-thumbnail img {
     border-radius: 12px;
     width: 100%;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
 }
 /* Popup Detail End */
 
@@ -541,12 +574,16 @@ section {
 
 .pp-content-video {
     padding: 30px;
-    border-radius: 30px;
+    border-radius: 6px;
     max-width: 900px;
     width: 100%;
     opacity: 0;
     transform: scale(0.9);
     box-shadow: var(--box-shadow-primary);
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
 }
 
 .pp-content-video:hover {

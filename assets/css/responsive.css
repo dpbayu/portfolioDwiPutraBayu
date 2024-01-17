@@ -1,48 +1,37 @@
-@media(max-width: 1024px) and (max-width:1440px) {
+@media (max-width:1440px) {
+    #portfolio .content .content-portfolio {
+        width: 100%;
+    }
     #contact form {
         width: 100%;
     }
 }
 
-@media(min-width: 1024px) and (max-width:1200px) {
-    #portfolio .content .content-portfolio {
-        width: 100%;
-    }
-
-    #portfolio .portfolio-item {
-        width: calc((100% / 3) - 20px);
-    }
-}
-
-@media(min-width: 768px) and (max-width:1023px) {
+@media (max-width:1024px) {
     section {
-        margin: 10px;
+        margin: 100px 0;
     }
-
     #about h3 {
         margin-top: 100px;
     }
-
     #about .img-profile {
         height: 300px;
     }
-
     #about .about-skill {
         gap: 50px;
     }
-
     #resume h3 {
         margin-top: 100px;
     }
-
     #portfolio h3 {
         margin-top: 100px;
     }
-
     #portfolio .portfolio-item {
-        width: calc((100% / 3) - 20px);
+        width: calc((100% / 3.5) - 20px);
     }
-
+    #portfolio .content .content-portfolio {
+        justify-content: center;
+    }
     #contact form {
         width: 100%;
     }
@@ -52,102 +41,55 @@
     #portfolio .content .content-portfolio {
         width: 100%;
     }
-
     #portfolio .menu-portfolio {
         display: flex;
         flex-direction: column;
         width: 50%;
         gap: 20px;
+        width: max-content;
     }
-
     #portfolio .portfolio-item {
-        width: calc((100% / 2) - 20px);
+        width: calc((100% / 2.5));
     }
-
-    #contact .info {
-        padding: 20px;
-    }
-
-    #contact form {
-        width: 100%;
-    }
-
 }
 
-@media(max-width: 767px) {
+@media (min-width:320px) and (max-width:767px) {
     section {
-        margin: 10px;
+        text-align: center;
     }
-
     #about h3 {
         margin-top: 100px;
     }
-
     #about .about-content {
-        flex-direction: column-reverse;
+        flex-wrap: wrap-reverse;
         gap: 20px;
     }
-
-    #about .about-btn {
-        justify-content: space-evenly;
-    }
-
-    #about .about-skill {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 50px;
-    }
-
-    #about .img-profile {
-        height: 400px;
-    }
-
-    #about .about-project .about-icon-project {
+    #about .about-content .about-skill {
+        flex-wrap: wrap;
         justify-content: center;
     }
-
     #resume h3 {
         margin-top: 100px;
     }
-
     #portfolio h3 {
         margin-top: 100px;
     }
-
-    #contact h3 {
-        margin-top: 100px;
-    }
-
-    #contact form {
-        width: 100%;
-    }
-}
-
-
-@media (min-width:320px) and (max-width:425px) {
-    #about h3 {
-        margin-top: 100px;
-    }
-
-    #resume h3 {
-        margin-top: 100px;
-    }
-
-    #portfolio h3 {
-        margin-top: 100px;
-    }
-
     #portfolio .portfolio-item {
         width: 100%;
+        height: max-content;
     }
-
+    #portfolio img {
+        height: 100%;
+    }
     #contact h3 {
         margin-top: 100px;
     }
-
     #contact .info {
         padding: 20px;
         margin: 0 20px;
     }
+}
+
+@media (max-width:425px) {
+
 }
