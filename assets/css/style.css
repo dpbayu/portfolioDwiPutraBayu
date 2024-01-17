@@ -100,7 +100,7 @@ section {
 /* Home */
 #home img {
     box-shadow: var(--box-shadow-primary);
-    border-radius: 12px;
+    object-fit: cover;
 }
 
 #home img:hover {
@@ -111,6 +111,10 @@ section {
     width: 50px;
     height: 50px;
     border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
     padding: 12px;
     display: flex;
     flex-direction: column;
@@ -180,6 +184,10 @@ section {
     width: 50px;
     height: 50px;
     border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
     padding: 12px;
     display: flex;
     flex-direction: column;
@@ -201,11 +209,19 @@ section {
     justify-content: center;
     align-items: center;
     border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
 }
 
 #about .img-profile {
     box-shadow: var(--box-shadow-primary);
     border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
     width: 75%;
     height: 100%;
     object-fit: cover;
@@ -239,6 +255,10 @@ section {
 #about .about-project .about-icon-project .icon-project {
     box-shadow: var(--box-shadow-primary);
     border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
 }
 
 #about .about-project .about-icon-project .icon-project:hover {
@@ -252,6 +272,10 @@ section {
 #about .about-list-skill {
     padding: 20px 0;
     border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
     box-shadow: var(--box-shadow-primary);
 }
 
@@ -269,6 +293,10 @@ section {
     margin-right: 20px;
     box-shadow: var(--box-shadow-primary);
     border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
 }
 
 #about .about-list-skill .about-list-skill-detail iconify-icon:hover {
@@ -281,12 +309,12 @@ section {
     padding: 4px 12px;
     display: inline-block;
     border-radius: 6px;
-    cursor: pointer;
-    box-shadow: var(--box-shadow-primary);
     -webkit-border-radius: 6px;
     -moz-border-radius: 6px;
     -ms-border-radius: 6px;
     -o-border-radius: 6px;
+    cursor: pointer;
+    box-shadow: var(--box-shadow-primary);
 }
 
 #portfolio .menu-portfolio li.active {
@@ -297,12 +325,12 @@ section {
 #portfolio .post-thumb {
     padding: 20px;
     border-radius: 6px;
-    box-shadow: var(--box-shadow-primary);
-    margin: 10px 0;
     -webkit-border-radius: 6px;
     -moz-border-radius: 6px;
     -ms-border-radius: 6px;
     -o-border-radius: 6px;
+    box-shadow: var(--box-shadow-primary);
+    margin: 10px 0;
 }
 
 #portfolio .post-thumb:hover {
@@ -312,23 +340,23 @@ section {
 #portfolio img {
     width: 100%;
     border-radius: 12px;
-    height: 125px;
-    object-fit: fill;
     -webkit-border-radius: 12px;
     -moz-border-radius: 12px;
     -ms-border-radius: 12px;
     -o-border-radius: 12px;
+    height: 125px;
+    object-fit: fill;
 }
 
 #portfolio video {
     width: 100%;
     border-radius: 12px;
-    height: 125px;
-    object-fit: fill;
     -webkit-border-radius: 12px;
     -moz-border-radius: 12px;
     -ms-border-radius: 12px;
     -o-border-radius: 12px;
+    height: 125px;
+    object-fit: fill;
 }
 
 #portfolio .img-portfolio {
@@ -461,15 +489,15 @@ section {
 .pp-content {
     padding: 30px;
     border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
     max-width: 900px;
     width: 100%;
     opacity: 0;
     transform: scale(0.9);
     box-shadow: var(--box-shadow-primary);
-    -webkit-border-radius: 6px;
-    -moz-border-radius: 6px;
-    -ms-border-radius: 6px;
-    -o-border-radius: 6px;
 }
 
 .pp-content:hover {
@@ -511,7 +539,6 @@ section {
     height: 40px;
     width: 40px;
     padding: 0;
-    border-radius: 50%;
     align-items: center;
     justify-content: center;
     position: absolute;
@@ -519,6 +546,7 @@ section {
     top: -40px;
     background: var(--background-web);
     box-shadow: var(--box-shadow-primary);
+    border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
@@ -539,11 +567,11 @@ section {
 
 .pp-thumbnail img {
     border-radius: 12px;
-    width: 100%;
     -webkit-border-radius: 12px;
     -moz-border-radius: 12px;
     -ms-border-radius: 12px;
     -o-border-radius: 12px;
+    width: 100%;
 }
 /* Popup Detail End */
 
@@ -575,15 +603,15 @@ section {
 .pp-content-video {
     padding: 30px;
     border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
     max-width: 900px;
     width: 100%;
     opacity: 0;
     transform: scale(0.9);
     box-shadow: var(--box-shadow-primary);
-    -webkit-border-radius: 6px;
-    -moz-border-radius: 6px;
-    -ms-border-radius: 6px;
-    -o-border-radius: 6px;
 }
 
 .pp-content-video:hover {
@@ -625,7 +653,6 @@ section {
     height: 40px;
     width: 40px;
     padding: 0;
-    border-radius: 50%;
     align-items: center;
     justify-content: center;
     position: absolute;
@@ -633,6 +660,11 @@ section {
     top: -40px;
     background: var(--background-web);
     box-shadow: var(--box-shadow-primary);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
 }
 
 .pp-header-video .btn:hover {
@@ -641,10 +673,18 @@ section {
 
 .pp-thumbnail-video {
     border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
 }
 
 .pp-thumbnail-video video {
     border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
     width: 100%;
 }
 /* Popup Video End */
@@ -657,18 +697,26 @@ section {
 #contact form input {
     border: none;
     padding: 10px;
-    border-radius: 50px;
     box-shadow: var(--box-shadow-third);
     background: var(--background-web);
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
 }
 
 #contact form textarea {
     border: none;
     resize: none;
     padding: 10px;
-    border-radius: 10px;
     box-shadow: var(--box-shadow-third);
     background: var(--background-web);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
 }
 
 #contact .form-control::-webkit-input-placeholder {
@@ -677,8 +725,12 @@ section {
 }
 
 #contact form input:focus {
-    border-radius: 50px;
     box-shadow: var(--box-shadow-secondary);
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
 }
 
 #contact form textarea:focus {
@@ -689,24 +741,28 @@ section {
     padding: 12px;
     color: var(--text-color);
     box-shadow: var(--box-shadow-primary);
-    /* background: var(--forth-color) border-box;
-        box-shadow: var(--box-shadow-forth); */
 }
 
 #contact form .btn-forth:hover {
     color: var(--text-color);
     box-shadow: var(--box-shadow-secondary);
-    /* background: var(--forth-color) border-box;
-        box-shadow: var(--box-shadow-forth); */
 }
 
 #contact .info {
     width: 100%;
-    border-radius: 12px;
     box-shadow: var(--box-shadow-primary);
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
 }
 
 #contact .info .info-inside {
-    border-radius: 6px;
     box-shadow: var(--box-shadow-secondary);
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
 }
