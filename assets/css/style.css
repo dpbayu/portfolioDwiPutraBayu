@@ -57,6 +57,7 @@ body {
 
 section {
     margin: 100px;
+    padding: 0 50px;
 }
 
 .separator-section {
@@ -159,6 +160,7 @@ section {
     display: flex;
     gap: 50px;
     margin: 50px 0;
+    justify-content: center;
 }
 
 #about .about-content .about-btn .btn-forth {
@@ -246,6 +248,8 @@ section {
 #about .about-project {
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
+    row-gap: 10px;
 }
 
 #about .about-project .about-icon-project {
@@ -253,6 +257,7 @@ section {
 }
 
 #about .about-project .about-icon-project .icon-project {
+    width: 65px;
     box-shadow: var(--box-shadow-primary);
     border-radius: 12px;
     -webkit-border-radius: 12px;
@@ -279,9 +284,16 @@ section {
     box-shadow: var(--box-shadow-primary);
 }
 
-#about .about-list-skill .about-list-skill-detail {
+#about .about-list-skill h5 {
     padding: 0 20px;
     margin: 20px;
+}
+
+#about .about-list-skill .about-list-skill-detail {
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 10px;
 }
 
 #about .about-list-skill .about-list-skill-detail h5 {

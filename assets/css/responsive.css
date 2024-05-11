@@ -38,6 +38,9 @@
 }
 
 @media (max-width:768px) {
+    section {
+        padding: 0 30px;
+    }
     #portfolio .content .content-portfolio {
         width: 100%;
         gap: 20px;
@@ -68,6 +71,9 @@
     #about .about-content .about-skill {
         flex-wrap: wrap;
         justify-content: center;
+    }
+    #about .about-list-skill .about-list-skill-detail {
+        justify-content: center
     }
     #resume h3 {
         margin-top: 100px;
