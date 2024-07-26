@@ -75,34 +75,41 @@ const fliterGallery = new FilterGallery();
 document.addEventListener("click", (e) => {
   if (e.target.classList.contains("btn-detail")) {
     togglePortfolioPopup();
-    document.querySelector(".portfolio-popup").scrollTo(0, 0);
-    portfolioItemDetails(e.target.parentElement);
+    const clickedItem = e.target.parentElement;
+    loadPortfolioItemsIntoCarousel(clickedItem);
   }
 });
-
 function togglePortfolioPopup() {
   document.querySelector(".portfolio-popup").classList.toggle("open");
   document.body.classList.toggle("hide-scrolling");
-  // document.querySelector(".main").classList.toggle("fade-out")
 }
-document
-  .querySelector(".pp-close")
-  .addEventListener("click", togglePortfolioPopup);
-document.addEventListener("click", (e) => {
-  if (e.target.classList.contains("pp-inner")) {
-    togglePortfolioPopup();
+document.querySelector(".pp-close").addEventListener("click", togglePortfolioPopup);
+function loadPortfolioItemsIntoCarousel(clickedItem) {
+  const carouselInner = document.querySelector("#portfolioCarousel .carousel-inner");
+  carouselInner.innerHTML = '';
+  const carouselItemImages = clickedItem.querySelectorAll(".portfolio-item-thumbnail img");
+  const hasMultipleItems = carouselItemImages.length > 1;
+  carouselItemImages.forEach((image, index) => {
+    const carouselItem = document.createElement("div");
+    carouselItem.classList.add("carousel-item");
+    if (index === 0 && !hasMultipleItems) carouselItem.classList.add("active");
+    const imgElement = document.createElement("img");
+    imgElement.src = image.src;
+    imgElement.classList.add("d-block", "w-100");
+    carouselItem.appendChild(imgElement);
+    carouselInner.appendChild(carouselItem);
+  });
+  if (hasMultipleItems) {
+    carouselInner.querySelector(".carousel-item:first-child").classList.add("active");
   }
-});
-
-function portfolioItemDetails(portfolioItem) {
-  document.querySelector(".pp-thumbnail img").src = portfolioItem.querySelector(
-    ".portfolio-item-thumbnail img"
-  ).src;
-  document.querySelector(".pp-header h3").innerHTML =
-    portfolioItem.querySelector(".portfolio-item-title").innerHTML;
-  document.querySelector(".pp-body").innerHTML = portfolioItem.querySelector(
-    ".portfolio-item-details"
-  ).innerHTML;
+  const description = clickedItem.querySelector(".description").innerHTML;
+  const generalInfo = clickedItem.querySelector(".general-info").innerHTML;
+  document.querySelector(".pp-header h3").innerHTML = clickedItem.querySelector(".portfolio-item-title").innerHTML;
+  document.querySelector(".pp-body .description p").innerHTML = description;
+  document.querySelector(".pp-body .general-info").innerHTML = generalInfo;
+  new bootstrap.Carousel('#portfolioCarousel .carousel', {
+    interval: false
+  });
 }
 // Portfolio Item Details Popup End //
 
@@ -114,13 +121,10 @@ document.addEventListener("click", (e) => {
     portfolioItemDetailsVideo(e.target.parentElement);
   }
 });
-
 function togglePortfolioPopupVideo() {
   document.querySelector(".portfolio-popup-video").classList.toggle("open");
   document.body.classList.toggle("hide-scrolling");
-  // document.querySelector(".main").classList.toggle("fade-out")
 }
-
 document
   .querySelector(".pp-close-video")
   .addEventListener("click", togglePortfolioPopupVideo);
@@ -129,7 +133,6 @@ document.addEventListener("click", (e) => {
     togglePortfolioPopupVideo();
   }
 });
-
 function portfolioItemDetailsVideo(portfolioItem) {
   document.querySelector(".pp-thumbnail-video video").src =
     portfolioItem.querySelector(".portfolio-item-thumbnail-video source").src;

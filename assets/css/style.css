@@ -471,6 +471,7 @@ section {
 #portfolio .portfolio-item-details-video {
     display: none;
 }
+
 /* Portfolio Video End */
 
 /*  Popup Detail Start */
@@ -522,10 +523,6 @@ section {
     transition: all 0.5s ease;
 }
 
-.pp-header {
-    position: relative;
-}
-
 .pp-header h3 {
     margin: 10px 0;
 }
@@ -554,8 +551,8 @@ section {
     align-items: center;
     justify-content: center;
     position: absolute;
-    right: -40px;
-    top: -40px;
+    right: -20px;
+    top: -20px;
     background: var(--background-web);
     box-shadow: var(--box-shadow-primary);
     border-radius: 50%;
@@ -585,6 +582,7 @@ section {
     -o-border-radius: 12px;
     width: 100%;
 }
+
 /* Popup Detail End */
 
 /*  Popup Detail Video Start */
@@ -699,6 +697,7 @@ section {
     -o-border-radius: 12px;
     width: 100%;
 }
+
 /* Popup Video End */
 
 /* Contact */

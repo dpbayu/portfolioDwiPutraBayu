@@ -276,20 +276,18 @@
               <div class="portfolio-item post Website">
                 <div class="portfolio-item-thumbnail">
                   <img src="assets/img/portfolio/Chill&Burn.png" alt="Chill & Burn" />
+                  <img class="visually-hidden" src="assets/img/portfolio/Medisync.png" alt="Chill & Burn" />
                 </div>
                 <h5 class="portfolio-item-title">Website Chill & Burn</h5>
-                <button type="button" class="btn btn-detail">
-                  View Project
-                </button>
+                <button type="button" class="btn btn-detail">View Project</button>
                 <div class="portfolio-item-details">
                   <div class="description">
                     <p>
-                      Coffee Shop Chill & Burn is a trendy and vibrant coffee
-                      shop that aims to create a welcoming and relaxed
-                      atmosphere for coffee enthusiasts and those looking to
-                      unwind. Our coffee shop is designed to be a perfect
-                      blend of a cozy space for chilling out and a hub for
-                      coffee lovers who seek the perfect brew.
+                      Coffee Shop Chill & Burn is a trendy and vibrant coffee shop that aims to create a welcoming and
+                      relaxed
+                      atmosphere for coffee enthusiasts and those looking to unwind. Our coffee shop is designed to be a
+                      perfect
+                      blend of a cozy space for chilling out and a hub for coffee lovers who seek the perfect brew.
                     </p>
                     <table class="table table-light table-bordered mt-3">
                       <tr>
@@ -700,14 +698,24 @@
 <!-- Portfolio Item Details Popup Start -->
 <div class="portfolio-popup">
   <div class="pp-inner">
-    <div class="pp-content">
+    <div class="pp-content" id="portfolioCarousel">
+      <div class="carousel slide">
+        <div class="carousel-inner"></div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#portfolioCarousel .carousel"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#portfolioCarousel .carousel"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
       <div class="pp-header">
         <button type="button" class="btn pp-close">
           <i class="fas fa-times"></i>
         </button>
-        <div class="pp-thumbnail">
-          <img alt="pp-thumbnail" />
-        </div>
         <h3></h3>
       </div>
       <div class="pp-body">
