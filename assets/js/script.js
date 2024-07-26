@@ -122,25 +122,32 @@ document.addEventListener("click", (e) => {
   }
 });
 function togglePortfolioPopupVideo() {
-  document.querySelector(".portfolio-popup-video").classList.toggle("open");
+  const popup = document.querySelector(".portfolio-popup-video");
+  popup.classList.toggle("open");
   document.body.classList.toggle("hide-scrolling");
+  if (!popup.classList.contains("open")) {
+    const video = document.querySelector(".pp-thumbnail-video video");
+    video.pause();
+  }
 }
+
 document
   .querySelector(".pp-close-video")
   .addEventListener("click", togglePortfolioPopupVideo);
-document.addEventListener("click", (e) => {
-  if (e.target.classList.contains("pp-inner-video")) {
-    togglePortfolioPopupVideo();
-  }
-});
 function portfolioItemDetailsVideo(portfolioItem) {
-  document.querySelector(".pp-thumbnail-video video").src =
-    portfolioItem.querySelector(".portfolio-item-thumbnail-video source").src;
+  const videoSource = portfolioItem.querySelector(".portfolio-item-thumbnail-video source").src;
+  const popupVideo = document.querySelector(".pp-thumbnail-video video");
+  popupVideo.src = videoSource;
+  popupVideo.load();
+  popupVideo.play();
   document.querySelector(".pp-header-video h3").innerHTML =
     portfolioItem.querySelector(".portfolio-item-title-video").innerHTML;
-  document.querySelector(".pp-body-video").innerHTML =
-    portfolioItem.querySelector(".portfolio-item-details-video").innerHTML;
+  document.querySelector(".pp-body-video .description-video").innerHTML =
+    portfolioItem.querySelector(".description-video").innerHTML;
+  document.querySelector(".pp-body-video .general-info-video").innerHTML =
+    portfolioItem.querySelector(".general-info-video").innerHTML;
 }
+
 // Portfolio Item Details Video Popup End //
 
 // Sweet Alert Start
