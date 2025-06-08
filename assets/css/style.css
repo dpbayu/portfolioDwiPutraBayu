@@ -82,7 +82,7 @@ section {
 }
 
 #menu li.active a {
-    font-weight: 500;
+    font-weight: 600;
     background: var(--forth-color);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -94,7 +94,7 @@ section {
 
 #menu li a,
 #menu li.active a {
-    padding: 9px 18px;
+    padding: 6px 18px;
     display: block;
 }
 
