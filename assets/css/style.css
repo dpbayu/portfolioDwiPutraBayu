@@ -237,7 +237,7 @@ section {
 
 #about .img-profile:hover {
     box-shadow: var(--box-shadow-secondary);
-    padding: 20px;
+    padding: 10px;
     transition: all ease-in-out 1s;
     -webkit-transition: all ease-in-out 1s;
     -moz-transition: all ease-in-out 1s;
