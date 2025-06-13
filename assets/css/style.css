@@ -55,9 +55,17 @@ body {
     color: var(--text-color);
 }
 
-section {
-    margin: 100px;
-    padding: 0 50px;
+.section {
+    height: 100vh;
+    width: 100vw;
+}
+
+.content {
+    height: 100vh;
+    overflow-y: auto;
+    padding: 50px;
+    border-radius: 10px;
+    box-sizing: border-box;
 }
 
 .separator-section {

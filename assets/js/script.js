@@ -1,28 +1,30 @@
 // Parallax Start
 $(document).ready(function () {
-  $("#pagepiling").pagepiling({
-    menu: "#menu",
-    anchors: ["home", "about", "portfolio", "contact"],
+  $('#pagepiling').pagepiling({
+    menu: '#menu',
+    anchors: ['home', 'about', 'portfolio', 'contact'],
     navigation: {
-      textColor: "#f2f2f2",
-      bulletsColor: "#ccc",
-      position: "right",
-      tooltips: ["Home", "About", "Portfolio", "Contact"],
+      textColor: '#f2f2f2',
+      bulletsColor: '#ccc',
+      position: 'right',
+      tooltips: ['Home', 'About', 'Portfolio', 'Contact'],
     },
-    sectionsColor: ["#EBEEF1", "#EBEEF1", "#EBEEF1", "#EBEEF1"],
-    direction: "vertical",
+    sectionsColor: ['#EBEEF1', '#EBEEF1', '#EBEEF1', '#EBEEF1'],
+    direction: 'vertical',
     verticalCentered: true,
     scrollingSpeed: 700,
-    easing: "swing",
-    loopBottom: false,
-    loopTop: false,
-    normalScrollElements: null,
-    normalScrollElementTouchThreshold: 5,
-    touchSensitivity: 5,
+    easing: 'swing',
+    loopBottom: true,
+    loopTop: true,
     keyboardScrolling: true,
     animateAnchor: true,
+    normalScrollElements: '.content',
+    afterLoad: function (anchorLink, index) {
+        $('.section').eq(index - 1).find('.content').scrollTop(0);
+    }
   });
 });
+
 // Parallax End
 
 // Filter Portfolio Start
@@ -79,11 +81,13 @@ document.addEventListener("click", (e) => {
     loadPortfolioItemsIntoCarousel(clickedItem);
   }
 });
+
 function togglePortfolioPopup() {
   document.querySelector(".portfolio-popup").classList.toggle("open");
   document.body.classList.toggle("hide-scrolling");
 }
 document.querySelector(".pp-close").addEventListener("click", togglePortfolioPopup);
+
 function loadPortfolioItemsIntoCarousel(clickedItem) {
   const carouselInner = document.querySelector("#portfolioCarousel .carousel-inner");
   carouselInner.innerHTML = '';
@@ -121,6 +125,7 @@ document.addEventListener("click", (e) => {
     portfolioItemDetailsVideo(e.target.parentElement);
   }
 });
+
 function togglePortfolioPopupVideo() {
   const popup = document.querySelector(".portfolio-popup-video");
   popup.classList.toggle("open");
@@ -134,6 +139,7 @@ function togglePortfolioPopupVideo() {
 document
   .querySelector(".pp-close-video")
   .addEventListener("click", togglePortfolioPopupVideo);
+
 function portfolioItemDetailsVideo(portfolioItem) {
   const videoSource = portfolioItem.querySelector(".portfolio-item-thumbnail-video source").src;
   const popupVideo = document.querySelector(".pp-thumbnail-video video");
