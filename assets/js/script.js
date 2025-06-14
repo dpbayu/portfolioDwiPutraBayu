@@ -16,7 +16,6 @@ $(document).ready(function () {
     easing: 'swing',
     loopBottom: true,
     loopTop: true,
-    keyboardScrolling: true,
     animateAnchor: true,
     normalScrollElements: '.content',
     afterLoad: function (anchorLink, index) {
